@@ -40,10 +40,34 @@ body {
     margin-top: 16px;
 }
 
-.signup>div>label {
+label {
     display: block;
 }
 
 .btn {
     cursor: pointer;
+}
+
+.container {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container div {
+    padding: 8px;
+}
+
+.container label {
+    margin-bottom: 8px;
+}
+
+.btn-save {
+    cursor: pointer;
+}
+
+.container input {
+    min-width: 200px;
+    font-size: 16px;
 }
