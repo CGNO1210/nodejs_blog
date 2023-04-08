@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+
+    <h1>Table users :</h1>
+    <table border="1" class="center">
+        <thead>
+            <tr>
+                <th>lastName</th>
+                <th>firstName</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <% for(let i=0; i < data.length; i++) { %>
+            <tr>
+                <td>
+                    <%= data[i].lastName %>
+                </td>
+                <td>
+                    <%= data[i].firstName %>
+                </td>
+                <td>
+                    <button type="button"><a href="/detail/user/<%= data[i].id %>">Detail</a></button>
+                    <button type="button">Edit</button>
+                    <button type="button">Delete</button>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+</body>
+
+</html>
