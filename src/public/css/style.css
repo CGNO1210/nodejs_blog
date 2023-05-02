@@ -71,3 +71,16 @@ label {
     min-width: 200px;
     font-size: 16px;
 }
+
+a {
+    text-decoration: none;
+}
+
+.action {
+    display: flex;
+    gap: 8px;
+}
+
+input {
+    width: 400px;
+}

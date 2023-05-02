@@ -13,13 +13,11 @@
 <body>
     <div class="topnav">
         <a class="active" href="/">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <a href="/create">Create</a>
     </div>
 
     <div class="w3-container">
-        <h2>Table users :</h2>
+        <h2>Table custormer :</h2>
         <table class="w3-table-all w3-hoverable">
             <thead>
                 <tr class="w3-light-grey">
@@ -41,40 +39,22 @@
                         <%= data[i].firstName %>
                     </td>
                     <td>
-                        <button type="button"><a href="/detail/user/<%= data[i].id %>">Detail</a></button>
-                        <form action="/edituser/<%= data[i].id %>" method="GET">
-                            <button type="submit">Edit</button>
-                        </form>
-                        <form action="/deleteuser" method="POST">
-                            <input type="text" value="<%= data[i].id %>" hidden name="userId">
-                            <button type="submit">Delete</button>
-                        </form>
+                        <div class="action">
+                            <button type="button"><a href="/detail/user/<%= data[i].id %>">Detail</a></button>
+                            <form action="/edituser/<%= data[i].id %>" method="GET">
+                                <button type="submit">Edit</button>
+                            </form>
+                            <form action="/deleteuser" method="POST">
+                                <input type="text" value="<%= data[i].id %>" hidden name="userId">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </div>
                     </td>
                 </tr>
                 <% } %>
         </table>
 
-        <form action="/create" method="POST">
-            <div class="signup">
-                <div>
-                    <label for="">First Name</label>
-                    <input type="text" name="firstName">
-                </div>
-                <div>
-                    <label for="">Last Name</label>
-                    <input type="text" name="lastName">
-                </div>
-                <div>
-                    <label for="">Email</label>
-                    <input type="email" name="email">
-                </div>
-                <div>
-                    <label for="">Address</label>
-                    <input type="text" name="address">
-                </div>
-                <button type="submit" class="btn">Submit</button>
-            </div>
-        </form>
+
     </div>
 </body>
 

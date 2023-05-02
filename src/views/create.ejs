@@ -5,40 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update User</title>
+    <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 
 <body>
+
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a class="active" href="/create">Create</a>
+    </div>
     <div class="w3-container">
-        <form action="/updateuser" method="POST">
+        <h2>Create new customer:</h2>
+
+        <form action="/create" method="POST">
             <div class="signup">
                 <div>
-                    <label for="">Last Name</label>
-                    <input type="text" name="lastName" value="<%= user.lastName %>">
+                    <label for="">First Name</label>
+                    <input type="text" name="firstName">
                 </div>
                 <div>
-                    <label for="">First Name</label>
-                    <input type="text" name="firstName" value="<%= user.firstName %>">
+                    <label for="">Last Name</label>
+                    <input type="text" name="lastName">
                 </div>
                 <div>
                     <label for="">Email</label>
-                    <input type="text" name="email" value="<%= user.email %>">
+                    <input type="email" name="email">
                 </div>
                 <div>
                     <label for="">Address</label>
-                    <input type="text" name="address" value="<%= user.address %>">
+                    <input type="text" name="address">
                 </div>
-                <input type="text" name="id" hidden value="<%= id %>">
                 <div class="action">
-                    <button type="submit" class="btn-save">Save</button>
+                    <button type="submit" class="btn">Submit</button>
                     <button class="btn"><a href="/">Cancel</a></button>
                 </div>
             </div>
         </form>
     </div>
+
 </body>
 
 </html>
